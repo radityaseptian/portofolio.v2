@@ -2,7 +2,15 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: 'poppins',
+        rubik: 'rubik',
+      },
+      boxShadow: {
+        navModal: '0px -3px 3px rgba(0,0,0,.05)',
+      },
+    },
   },
   plugins: [],
 }
