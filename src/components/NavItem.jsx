@@ -1,12 +1,7 @@
 export default function NavItem({ name }) {
   return (
     <li>
-      <a
-        href={`#${name.toLowerCase()}`}
-        className='text-black/70 target:text-black'
-      >
-        {name}
-      </a>
+      <a href={`#${name.toLowerCase()}`}>{name}</a>
     </li>
   )
 }

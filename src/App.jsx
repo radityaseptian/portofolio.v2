@@ -11,7 +11,7 @@ import Footer from './layouts/Footer'
 export default function App() {
   return (
     <>
-      <div className='antialiased'>
+      <div className='antialiased bg-slate-50 dark:bg-zinc-800 dark:text-white'>
         <Header />
         <Container>
           <AboutSection />

@@ -9,7 +9,10 @@ import { ImBlog } from 'react-icons/im'
 
 export default function Header() {
   return (
-    <header id='beranda' className='min-h-screen flex items-center'>
+    <header
+      id='beranda'
+      className='min-h-screen flex items-center'
+    >
       <Navbar />
       <Container>
         <div className='relative mb-14 mt-4 md:m-0'>
@@ -44,7 +47,7 @@ export default function Header() {
             />
             <div className='self-stretch md:self-center flex justify-center'>
               <div>
-                <h1 className='text-5xl font-rubik font-extrabold leading-[3.2rem] text-[#333]'>
+                <h1 className='text-5xl font-rubik font-extrabold leading-[3.2rem] text-[#333] dark:text-white'>
                   Raditya Septian
                 </h1>
                 <TypeAnimation
@@ -69,7 +72,7 @@ export default function Header() {
                     <a
                       href='/resume.pdf'
                       download
-                      className='flex items-center gap-2 rounded-lg px-4 py-2 bg-slate-100 border'
+                      className='flex items-center gap-2 rounded-lg px-4 py-2 bg-slate-100 dark:bg-zinc-900 dark:border-zinc-700 border'
                     >
                       <FaFileDownload className='w-4 h-4' />
                       <span className='font-poppins'>Unduh Resume</span>
@@ -81,7 +84,7 @@ export default function Header() {
                       target='_blank'
                       rel='noopener noreferrer'
                       download
-                      className='flex items-center gap-2 rounded-lg px-4 py-2 bg-slate-100 border'
+                      className='flex items-center gap-2 rounded-lg px-4 py-2 bg-slate-100 dark:bg-zinc-900 dark:border-zinc-700 border'
                     >
                       <ImBlog className='w-4 h-4' />
                       <span className='font-poppins'>Blog</span>

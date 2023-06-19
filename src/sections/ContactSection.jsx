@@ -37,7 +37,7 @@ export default function ContactSection() {
             <Input nama='email' type='email' name='email' />
           </div>
           <div className='relative'>
-            <span className='capitalize absolute p-1 z-10 text-slate-500 bg-white left-[.9rem] -top-4'>
+            <span className='capitalize absolute p-1 z-10 text-slate-500 bg-slate-50 dark:bg-zinc-800 dark:text-white left-[.9rem] -top-4'>
               Pesan
             </span>
             <textarea
@@ -45,7 +45,7 @@ export default function ContactSection() {
               type='text'
               placeholder='Tuliskan pesan anda'
               rows={5}
-              className='relative outline-none p-4 border rounded-lg w-full custom-shadow'
+              className='relative outline-none bg-slate-50 dark:bg-zinc-800 p-4 border rounded-lg w-full custom-shadow'
             />
           </div>
           <button

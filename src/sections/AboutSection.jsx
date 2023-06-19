@@ -1,6 +1,4 @@
 import HeaderSection from '../components/HeaderSection'
-import Container from '../components/Container'
-
 export default function AboutSection() {
   return (
     <section id='tentang' className='py-16'>

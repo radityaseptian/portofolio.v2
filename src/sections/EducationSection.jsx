@@ -20,7 +20,7 @@ const education = {
       title: 'Backend Developer',
       date: '2023 - Sekarang',
       description:
-        'Node.JS,Express.JS, Basic auth, JWT, Routing, Middleware, Upload file',
+        'Node.JS, Express.JS, Basic auth, JWT, Routing, Middleware, Upload file',
     },
     {
       title: 'Database',
@@ -38,40 +38,45 @@ const education = {
       title: 'Javascript',
       date: '2022',
       description:
-        'Basic, Tipe data, Perulangn, Perkondisian, Function, DOM, ES6, Promise, Async/Await',
+        'Dasar, Tipe data, Perulangan, Perkondisian, Function, DOM, ES6, Promise, Async/Await',
     },
     {
       title: 'HTML - CSS',
       date: '2022',
       description:
-        'Cara membuat tag, Semantic element, Nested, Attribut, Link , HTML5, CSS dasar, Layouting, Flexbox, Grid',
+        'Cara membuat tag, Semantic element, Nested, Attribut, Link, HTML5, CSS dasar, Layouting, Flexbox, Grid, Transition',
     },
   ],
 }
 
 export default function EducationSection() {
   const [tab, setTab] = useState(1)
-
   return (
     <section id='edukasi' className='py-16'>
       <HeaderSection title='Edukasi' description='Perjalanan saya' />
       <div>
-        <ul className='flex gap-4 md:gap-6 justify-center font-semibold'>
+        <ul className='flex gap-4 md:gap-6 justify-center font-semibold text-black'>
           <li
             onClick={() => setTab(1)}
-            className='px-4 py-2 bg-red-100 cursor-pointer rounded-md'
+            className={`${
+              tab === 1 && 'bg-blue-600 dark:bg-blue-600 text-white'
+            } px-4 py-2 bg-blue-100 dark:bg-zinc-900 dark:text-white cursor-pointer rounded-md`}
           >
             Non-Formal
           </li>
           <li
             onClick={() => setTab(2)}
-            className='px-4 py-2 bg-red-100 cursor-pointer rounded-md'
+            className={`${
+              tab === 2 && 'bg-blue-600 dark:bg-blue-600 text-white'
+            } px-4 py-2 bg-blue-100 dark:bg-zinc-900 dark:text-white cursor-pointer rounded-md`}
           >
             Formal
           </li>
         </ul>
-        {tab === 1 && <EducationContent data={education.nonFormal} />}
-        {tab === 2 && <EducationContent data={education.formal} />}
+        <div className='pt-10'>
+          {tab === 1 && <EducationContent data={education.nonFormal} />}
+          {tab === 2 && <EducationContent data={education.formal} />}
+        </div>
       </div>
     </section>
   )

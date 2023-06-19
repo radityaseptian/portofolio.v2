@@ -1,14 +1,33 @@
 export default function EducationContent({ data = [] }) {
   return (
     <>
-      {data.map((item) => {
-        return (
-          <div className='flex gap-3 h-10 bg-red-200'>
-            <div className='bg-green-400'></div>
-            <div className='w-[1.4px] bg-black relative'>
-              <span className='w-4 h-4 absolute -left-2 bg-slate-900 rounded-full'></span>
+      {data.map((item, i) => {
+        if (i % 2 == 0) {
+          return (
+            <div key={item.title} className='flex gap-3 md:gap-5 text-right'>
+              <div className='flex-1 pb-6'>
+                <h3 className='font-bold'>{item.title}</h3>
+                <div className='pb-2 pt-3'>{item.date}</div>
+                <p className='md:pl-28'>{item.description}</p>
+              </div>
+              <div className='w-[1.4px] bg-black dark:bg-white relative'>
+                <span className='w-4 h-4 absolute -left-2 bg-black dark:bg-white rounded-full'></span>
+              </div>
+              <div className='flex-1'></div>
             </div>
-            <div className='bg-green-400'></div>
+          )
+        }
+        return (
+          <div key={item.title} className='flex gap-3 md:gap-5'>
+            <div className='flex-1'></div>
+            <div className='w-[1.4px] bg-black dark:bg-white relative'>
+              <span className='w-4 h-4 absolute -left-2 bg-black dark:bg-white rounded-full'></span>
+            </div>
+            <div className='flex-1 pb-6'>
+              <h3 className='font-bold'>{item.title}</h3>
+              <div className='pb-2 pt-3'>{item.date}</div>
+              <p className='md:pr-28'>{item.description}</p>
+            </div>
           </div>
         )
       })}
