@@ -3,7 +3,7 @@ import Container from '../components/Container'
 
 export default function AboutSection() {
   return (
-    <section className='py-12'>
+    <section id='tentang' className='py-16'>
       <HeaderSection
         title='Tentang'
         description='Biarkan saya memperkenalkan diri'

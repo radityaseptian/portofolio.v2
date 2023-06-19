@@ -1,10 +1,12 @@
 import Header from './layouts/Header'
+import Container from './components/Container'
 import AboutSection from './sections/AboutSection'
+import EducationSection from './sections/EducationSection'
 import SkillSection from './sections/SkillSection'
 import ProjectSection from './sections/ProjectSection'
-import Container from './components/Container'
+import ContactSection from './sections/ContactSection'
 
-// import Footer from './layouts/Footer'
+import Footer from './layouts/Footer'
 
 export default function App() {
   return (
@@ -13,9 +15,12 @@ export default function App() {
         <Header />
         <Container>
           <AboutSection />
+          <EducationSection />
           <SkillSection />
           <ProjectSection />
+          <ContactSection />
         </Container>
+        <Footer />
       </div>
     </>
   )

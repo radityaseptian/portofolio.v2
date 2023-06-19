@@ -1,5 +1,4 @@
 import HeaderSection from '../components/HeaderSection'
-import Container from '../components/Container'
 import Skill from '../components/Skill'
 
 import html from '../../src/assets/skills/html.svg'
@@ -94,7 +93,7 @@ export default function SkillSection() {
   const [count, setCount] = useState(1)
 
   return (
-    <section className='py-12'>
+    <section id='kemampuan' className='py-16'>
       <HeaderSection
         title='Kemampuan'
         description='Semua kemampuan saya sejauh ini'

@@ -11,6 +11,7 @@ import {
 import { SiJavascript } from 'react-icons/si'
 import { BsCloudSunFill, BsMoonStarsFill, BsFillGridFill } from 'react-icons/bs'
 import { GrSend } from 'react-icons/gr'
+import { FaGraduationCap } from 'react-icons/fa'
 
 const navList = [
   {
@@ -20,6 +21,10 @@ const navList = [
   {
     name: 'Tentang',
     icon: AiOutlineUser,
+  },
+  {
+    name: 'Edukasi',
+    icon: FaGraduationCap,
   },
   {
     name: 'Kemampuan',
