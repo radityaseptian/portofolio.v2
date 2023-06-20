@@ -1,7 +1,11 @@
-export default function NavItem({ name }) {
+export default function NavItem(props) {
+  const { name, className } = props
+  const target = `#${name.toLowerCase()}`
   return (
-    <li>
-      <a href={`#${name.toLowerCase()}`}>{name}</a>
+    <li {...props}>
+      <a href={target} className={className}>
+        {name}
+      </a>
     </li>
   )
 }

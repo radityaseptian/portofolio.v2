@@ -44,6 +44,7 @@ const navList = [
 export default function Navbar() {
   const [theme, setTheme] = useState(false)
   const [showModal, setShowModal] = useState(false)
+  const [target, setTarget] = useState('#beranda')
 
   const html = document.documentElement
   const navbar = useRef(null)
@@ -79,7 +80,17 @@ export default function Navbar() {
             <div className='flex justify-between flex-row-reverse md:flex-row py-3 md:py-4 lg:py-5'>
               <ul className='hidden md:flex items-center gap-7 font-rubik font-semibold'>
                 {navList.map(({ name }) => {
-                  return <NavItem key={name} name={name} />
+                  const hash = `#${name.toLowerCase()}`
+                  return (
+                    <NavItem
+                      onClick={() => setTarget(hash)}
+                      className={
+                        target === hash ? 'text-black dark:text-white' : 'text-black/60 dark:text-white/60'
+                      }
+                      key={name}
+                      name={name}
+                    />
+                  )
                 })}
               </ul>
               <FiGrid
