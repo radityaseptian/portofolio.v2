@@ -4,6 +4,7 @@ import blog from '../assets/demo/blog.png'
 import shiganime from '../assets/demo/shiganime.png'
 import zeitplan from '../assets/demo/zeitplan.png'
 import portofolio1 from '../assets/demo/portofolio.v1.png'
+import portofolio2 from '../assets/demo/portofolio.v2.png'
 
 import tailwind from '../assets/skills/tailwind.svg'
 import react from '../assets/skills/react.svg'
@@ -97,7 +98,7 @@ const projects = [
   },
   {
     name: 'Portofolio Website V2',
-    img: portofolio1,
+    img: portofolio2,
     stack: [
       {
         name: 'React.JS',
