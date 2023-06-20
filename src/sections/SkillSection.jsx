@@ -97,23 +97,25 @@ export default function SkillSection() {
       <HeaderSection
         title='Kemampuan'
         description='Semua kemampuan saya sejauh ini'
-      />
-      <ul className='flex text-center'>
-        {tab.map((item, i) => {
-          return (
-            <li
-              onClick={() => setCount(i + 1)}
-              key={item}
-              className={`${
-                count == i + 1 &&
-                'border-b-2 border-b-blue-600 text-blue-600 hover:text-blue-600 hover:border-blue-600'
-              } flex-1 cursor-pointer border-b py-4 font-semibold duration-0 hover:text-blue-500 hover:border-blue-500`}
-            >
-              {item}
-            </li>
-          )
-        })}
-      </ul>
+      />{' '}
+      <div className='overflow-hidden overflow-x-scroll'>
+        <ul className='flex text-center w-[38rem] sm:w-auto'>
+          {tab.map((item, i) => {
+            return (
+              <li
+                onClick={() => setCount(i + 1)}
+                key={item}
+                className={`${
+                  count == i + 1 &&
+                  'border-b-2 border-b-blue-600 text-blue-600 hover:text-blue-600 hover:border-blue-600'
+                } flex-1 cursor-pointer border-b py-4 font-semibold duration-0 hover:text-blue-500 hover:border-blue-500`}
+              >
+                {item}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
       {count == 1 && <Skill list={language} />}
       {count == 2 && <Skill list={framework} />}
       {count == 3 && <Skill list={databases} />}

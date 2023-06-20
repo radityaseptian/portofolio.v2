@@ -9,14 +9,10 @@ import {
   AiOutlineFundProjectionScreen,
 } from 'react-icons/ai'
 import { SiJavascript } from 'react-icons/si'
-import {
-  BsFillSunFill,
-  BsFillMoonStarsFill,
-  BsFillGridFill,
-  BsArrowUp,
-} from 'react-icons/bs'
-import { GrSend } from 'react-icons/gr'
+import { BsFillSunFill, BsFillMoonStarsFill } from 'react-icons/bs'
+import { MdOutlineContacts } from 'react-icons/md'
 import { FaGraduationCap } from 'react-icons/fa'
+import { FiGrid } from 'react-icons/fi'
 
 const navList = [
   {
@@ -41,7 +37,7 @@ const navList = [
   },
   {
     name: 'Kontak',
-    icon: GrSend,
+    icon: MdOutlineContacts,
   },
 ]
 
@@ -72,10 +68,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', scrollHandle)
   }, [])
 
-  const backToTop = () => {
-    html.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
   return (
     <>
       <nav>
@@ -90,26 +82,22 @@ export default function Navbar() {
                   return <NavItem key={name} name={name} />
                 })}
               </ul>
-              <BsFillGridFill
+              <FiGrid
                 onClick={() => setShowModal(!showModal)}
-                className='md:hidden cursor-pointer bg-slate-500 text-white w-7 h-7 box-content p-[.20rem] rounded'
+                className='md:hidden cursor-pointer bg-slate-100 border dark:border-zinc-600 dark:bg-zinc-950 w-8 h-8 box-content p-[.20rem] rounded'
               />
               {showModal && <MobileNavModal item={navList} />}
-              <div onClick={() => setTheme(!theme)} className='cursor-pointer'>
+              <button onClick={() => setTheme(!theme)}>
                 {!theme ? (
                   <BsFillSunFill className='w-6 h-6 p-2 box-content bg-slate-100 border rounded-md text-yellow-500' />
                 ) : (
                   <BsFillMoonStarsFill className='w-6 h-6 p-2 box-content bg-zinc-950 rounded-md border border-zinc-600 text-stone-200' />
                 )}
-              </div>
+              </button>
             </div>
           </Container>
         </div>
       </nav>
-      <BsArrowUp
-        onClick={backToTop}
-        className='fixed w-6 h-6 rounded-full cursor-pointer bottom-20 right-5 z-50 md:bottom-10 md:right-10 bg-blue-50 hover:bg-blue-200 dark:bg-zinc-700 dark:hover:bg-zinc-800 dark:border-zinc-500 border box-content p-2 md:p-3'
-      />
     </>
   )
 }

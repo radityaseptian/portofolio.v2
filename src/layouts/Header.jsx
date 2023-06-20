@@ -15,7 +15,7 @@ export default function Header() {
     >
       <Navbar />
       <Container>
-        <div className='relative mb-14 mt-4 md:m-0'>
+        <div className='relative mb-14 mt-0 md:m-0'>
           <div className='absolute flex flex-col gap-4 md:gap-6 top-12 sm:top-16'>
             <a
               href='http://github.com/radityaseptian'
