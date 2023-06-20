@@ -8,7 +8,9 @@ export default function EducationContent({ data = [] }) {
               <div className='flex-1 pb-6'>
                 <h3 className='font-bold'>{item.title}</h3>
                 <div className='pb-2 pt-3'>{item.date}</div>
-                <p className='md:pl-28'>{item.description}</p>
+                <p className='md:pl-28 text-zinc-800 dark:text-slate-100'>
+                  {item.description}
+                </p>
               </div>
               <div className='w-[1.4px] bg-black dark:bg-white relative'>
                 <span className='w-4 h-4 absolute -left-2 bg-black dark:bg-white rounded-full'></span>
@@ -26,7 +28,9 @@ export default function EducationContent({ data = [] }) {
             <div className='flex-1 pb-6'>
               <h3 className='font-bold'>{item.title}</h3>
               <div className='pb-2 pt-3'>{item.date}</div>
-              <p className='md:pr-28'>{item.description}</p>
+              <p className='md:pr-28 text-zinc-800 dark:text-slate-100'>
+                {item.description}
+              </p>
             </div>
           </div>
         )

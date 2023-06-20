@@ -10,8 +10,8 @@ import {
 } from 'react-icons/ai'
 import { SiJavascript } from 'react-icons/si'
 import {
-  BsCloudSunFill,
-  BsMoonStarsFill,
+  BsFillSunFill,
+  BsFillMoonStarsFill,
   BsFillGridFill,
   BsArrowUp,
 } from 'react-icons/bs'
@@ -84,7 +84,7 @@ export default function Navbar() {
           className='fixed z-50 bottom-0 md:bottom-auto md:top-0 right-0 left-0 dark:text-white bg-white dark:bg-[#1d1d1d]'
         >
           <Container>
-            <div className='flex justify-between flex-row-reverse md:flex-row py-3 md:py-4 lg:py-6'>
+            <div className='flex justify-between flex-row-reverse md:flex-row py-3 md:py-4 lg:py-5'>
               <ul className='hidden md:flex items-center gap-7 font-rubik font-semibold'>
                 {navList.map(({ name }) => {
                   return <NavItem key={name} name={name} />
@@ -95,18 +95,11 @@ export default function Navbar() {
                 className='md:hidden cursor-pointer bg-slate-500 text-white w-7 h-7 box-content p-[.20rem] rounded'
               />
               {showModal && <MobileNavModal item={navList} />}
-              <div
-                onClick={() => setTheme(!theme)}
-                className={`${
-                  theme
-                    ? 'bg-blue-500 justify-end'
-                    : 'bg-black/20 justify-start'
-                } w-14 rounded-full p-1 flex cursor-pointer self-center`}
-              >
-                {theme ? (
-                  <BsMoonStarsFill className='w-4 h-4 p-[.10rem] box-content bg-white rounded-full text-slate-500' />
+              <div onClick={() => setTheme(!theme)} className='cursor-pointer'>
+                {!theme ? (
+                  <BsFillSunFill className='w-6 h-6 p-2 box-content bg-slate-100 border rounded-md text-yellow-500' />
                 ) : (
-                  <BsCloudSunFill className='w-4 h-4 p-[.10rem] box-content bg-white rounded-full text-yellow-500' />
+                  <BsFillMoonStarsFill className='w-6 h-6 p-2 box-content bg-zinc-950 rounded-md border border-zinc-600 text-stone-200' />
                 )}
               </div>
             </div>

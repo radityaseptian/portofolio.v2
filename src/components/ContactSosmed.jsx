@@ -2,7 +2,7 @@ import { FiArrowRight } from 'react-icons/fi'
 
 export default function ContactSosmed({ name, username, icon: Icon, href }) {
   return (
-    <div className='border flex flex-col items-center p-4 rounded-lg'>
+    <div className='border flex flex-col items-center p-4 rounded-lg bg-white dark:bg-[#242424] dark:border-zinc-600'>
       <a href={href} target='_blank' rel='noopener noreferrer'>
         <Icon className='w-6 h-6 md:w-7 md:h-7' />
       </a>

@@ -121,7 +121,7 @@ export default function ProjectSection() {
       <ul className='grid grid-cols-1 md:grid-cols-2 gap-6'>
         {projects.map((item) => {
           return (
-            <li key={item.name} className='rounded-xl overflow-hidden border'>
+            <li key={item.name} className='rounded-xl overflow-hidden border dark:border-zinc-700 bg-white dark:bg-[#242424]'>
               <a
                 href={item.linkDemo}
                 title={item.name}
@@ -141,12 +141,12 @@ export default function ProjectSection() {
                       target='_blank'
                       rel='noopener noreferrer'
                     >
-                      <BsCodeSlash className='w-6 h-6 box-content p-2 rounded-md bg-slate-100 hover:bg-slate-200' />
+                      <BsCodeSlash className='w-6 h-6 box-content p-2 rounded-md bg-slate-100 hover:bg-slate-200 dark:bg-zinc-900 dark:hover:bg-zinc-950' />
                     </a>
                     <a
                       href={item.linkDemo}
                       target='_blank'
-                      className='flex items-center gap-1 bg-slate-100 hover:bg-slate-200 p-2 rounded-md'
+                      className='flex items-center gap-1 bg-slate-100 hover:bg-slate-200 dark:bg-zinc-900 dark:hover:bg-zinc-950 p-2 rounded-md'
                     >
                       <span>buka</span>
                       <BsArrowRight />
