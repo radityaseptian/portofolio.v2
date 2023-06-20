@@ -59,7 +59,7 @@ export default function EducationSection() {
           <li
             onClick={() => setTab(1)}
             className={`${
-              tab === 1 && 'bg-blue-600 dark:bg-blue-700 text-white'
+              tab === 1 && 'bg-blue-600 dark:bg-blue-600 text-white'
             } px-4 py-2 bg-blue-100 dark:bg-zinc-900 dark:text-white cursor-pointer rounded-md`}
           >
             Non-Formal
@@ -67,7 +67,7 @@ export default function EducationSection() {
           <li
             onClick={() => setTab(2)}
             className={`${
-              tab === 2 && 'bg-blue-600 dark:bg-blue-700 text-white'
+              tab === 2 && 'bg-blue-600 dark:bg-blue-600 text-white'
             } px-4 py-2 bg-blue-100 dark:bg-zinc-900 dark:text-white cursor-pointer rounded-md`}
           >
             Formal
