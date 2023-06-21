@@ -9,7 +9,7 @@ export default function Footer() {
   const footer = language?.footer
 
   return (
-    <footer className='rounded-t-xl md:rounded-t-3xl bg-slate-100 dark:bg-[#1d1d1d] pb-24 md:pb-12 pt-10'>
+    <footer className='rounded-t-xl md:rounded-t-3xl bg-white dark:bg-[#1d1d1d] pb-24 md:pb-12 pt-10'>
       <Container>
         <div className='flex flex-col items-center'>
           <h4 className='text-xl md:text-2xl font-bold'>Raditya</h4>
