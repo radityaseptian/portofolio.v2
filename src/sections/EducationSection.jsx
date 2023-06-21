@@ -72,7 +72,7 @@ export default function EducationSection() {
             className={`${
               tab === 1
                 ? 'bg-blue-600 dark:bg-blue-600 text-white'
-                : 'dark:bg-zinc-900'
+                : 'dark:bg-zinc-900 hover:bg-blue-200 dark:hover:bg-zinc-950'
             } px-4 py-2 bg-blue-100 dark:text-white cursor-pointer rounded-md`}
           >
             Non-Formal
@@ -82,7 +82,7 @@ export default function EducationSection() {
             className={`${
               tab === 2
                 ? 'bg-blue-600 dark:bg-blue-600 text-white'
-                : ' dark:bg-zinc-900'
+                : ' dark:bg-zinc-900 hover:bg-blue-200 dark:hover:bg-zinc-950'
             } px-4 py-2 bg-blue-100 dark:text-white cursor-pointer rounded-md`}
           >
             Formal

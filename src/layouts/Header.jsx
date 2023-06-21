@@ -76,7 +76,7 @@ export default function Header() {
                     <a
                       href='/resume.pdf'
                       download
-                      className='flex items-center gap-2 rounded-lg px-4 py-2 bg-slate-100 dark:bg-zinc-900 dark:border-zinc-700 border'
+                      className='flex items-center gap-2 rounded-lg px-4 py-2 bg-slate-100 hover:bg-slate-200 dark:hover:bg-zinc-950 dark:bg-zinc-900 dark:border-zinc-700 border'
                     >
                       <FaFileDownload className='w-4 h-4' />
                       <span className='font-poppins'>{buttonDownload}</span>
@@ -88,7 +88,7 @@ export default function Header() {
                       target='_blank'
                       rel='noopener noreferrer'
                       download
-                      className='flex items-center gap-2 rounded-lg px-4 py-2 bg-slate-100 dark:bg-zinc-900 dark:border-zinc-700 border'
+                      className='flex items-center gap-2 rounded-lg px-4 py-2 bg-slate-100 hover:bg-slate-200 dark:hover:bg-zinc-950 dark:bg-zinc-900 dark:border-zinc-700 border'
                     >
                       <ImBlog className='w-4 h-4' />
                       <span className='font-poppins'>{buttonBlog}</span>

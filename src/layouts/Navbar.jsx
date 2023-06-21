@@ -65,7 +65,7 @@ export default function Navbar() {
                       className={
                         target === hash
                           ? 'text-black dark:text-white'
-                          : 'text-black/60 dark:text-white/60'
+                          : 'text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white'
                       }
                       key={name}
                       name={name}
@@ -75,16 +75,16 @@ export default function Navbar() {
               </ul>
               <FiGrid
                 onClick={() => setShowModal(!showModal)}
-                className='md:hidden cursor-pointer bg-slate-100 border dark:border-zinc-600 dark:bg-[#141417] w-8 h-8 box-content p-[.20rem] rounded'
+                className='md:hidden cursor-pointer bg-slate-100 border hover:bg-slate-200 dark:hover:bg-zinc-950 dark:border-zinc-600 dark:bg-[#141417] w-8 h-8 box-content p-[.20rem] rounded'
               />
               {showModal && <MobileNavModal item={navbarList} />}
               <div className='flex items-center flex-row-reverse md:flex-row gap-2 md:gap-4'>
                 <ToggleLanguage />
                 <button onClick={() => setTheme(!theme)}>
                   {!theme ? (
-                    <BsFillSunFill className='w-6 h-6 p-2 box-content bg-slate-100 border rounded-md text-yellow-500' />
+                    <BsFillSunFill className='w-6 h-6 p-2 box-content bg-slate-100 hover:bg-slate-200 border rounded-md text-yellow-500' />
                   ) : (
-                    <BsFillMoonStarsFill className='w-6 h-6 p-2 box-content bg-[#141417] rounded-md border border-zinc-600 text-stone-200' />
+                    <BsFillMoonStarsFill className='w-6 h-6 p-2 box-content bg-[#141417] hover:bg-zinc-950 rounded-md border border-zinc-600 text-stone-200' />
                   )}
                 </button>
               </div>

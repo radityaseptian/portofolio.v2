@@ -29,7 +29,7 @@ export default function ToggleLanguage() {
       <div className='relative'>
         <div
           onClick={() => setShowDropDown(!showDropDown)}
-          className='flex items-center gap-1 bg-slate-100 dark:bg-[#141417] dark:border-zinc-600 border rounded-md p-2 cursor-pointer'
+          className='flex items-center gap-1 bg-slate-100 hover:bg-slate-200 dark:hover:bg-zinc-950 dark:bg-[#141417] dark:border-zinc-600 border rounded-md p-2 cursor-pointer'
         >
           <img
             src={language.country === 'en' ? en : id}

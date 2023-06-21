@@ -14,7 +14,7 @@ export default function ContactSosmed({
       </a>
       <p className='font-bold pt-2'>{name}</p>
       <div>{username}</div>
-      <a href={href} target='_blank' className='flex items-center gap-1 pt-4'>
+      <a href={href} target='_blank' className='flex items-center gap-1 hover:gap-2 pt-4'>
         <span>{cardContact}</span>
         <FiArrowRight />
       </a>
