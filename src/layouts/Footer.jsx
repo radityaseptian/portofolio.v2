@@ -1,31 +1,20 @@
 import Container from '../components/Container'
+import useLanguage from '../context/LanguageContext'
 
 import { FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa'
 
-const items = [
-  'Beranda',
-  '/',
-  'Tentang',
-  '/',
-  'Kemampuan',
-  '/',
-  'Edukasi',
-  '/',
-  'Karya',
-  '/',
-  'Kontak',
-  '/',
-  'Blog',
-]
-
 export default function Footer() {
+  const { language } = useLanguage()
+
+  const footer = language?.footer
+
   return (
     <footer className='rounded-t-xl md:rounded-t-3xl bg-slate-100 dark:bg-[#1d1d1d] pb-24 md:pb-12 pt-10'>
       <Container>
         <div className='flex flex-col items-center'>
           <h4 className='text-xl md:text-2xl font-bold'>Raditya</h4>
-          <ul className='flex flex-wrap gap-4 md:gap-6 py-4'>
-            {items.map((item, i) => {
+          <ul className='flex flex-wrap gap-4 md:gap-6 py-4 capitalize'>
+            {footer.map((item, i) => {
               switch (item) {
                 case '/':
                   return (
@@ -33,9 +22,10 @@ export default function Footer() {
                       {item}
                     </li>
                   )
-                case 'Blog':
+                case 'blogs':
+                case 'blog':
                   return (
-                    <li key={item}>
+                    <li key={i}>
                       <a
                         href='http://radwritter.vercel.app'
                         target='_blank'
@@ -47,8 +37,8 @@ export default function Footer() {
                   )
                 default:
                   return (
-                    <li key={item}>
-                      <a href={`#${item.toLowerCase()}`}>{item}</a>
+                    <li key={i}>
+                      <a href={`#${item}`}>{item}</a>
                     </li>
                   )
               }

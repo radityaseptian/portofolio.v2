@@ -1,3 +1,4 @@
+import { LanguageProvider } from './context/LanguageContext'
 import Header from './layouts/Header'
 import Container from './components/Container'
 import AboutSection from './sections/AboutSection'
@@ -11,17 +12,19 @@ import Footer from './layouts/Footer'
 export default function App() {
   return (
     <>
-      <div className='antialiased bg-slate-50 dark:bg-zinc-800 dark:text-white'>
-        <Header />
-        <Container>
-          <AboutSection />
-          <EducationSection />
-          <SkillSection />
-          <ProjectSection />
-          <ContactSection />
-        </Container>
-        <Footer />
-      </div>
+      <LanguageProvider>
+        <div className='antialiased bg-slate-50 dark:bg-zinc-800 dark:text-white'>
+          <Header />
+          <Container>
+            <AboutSection />
+            <EducationSection />
+            <SkillSection />
+            <ProjectSection />
+            <ContactSection />
+          </Container>
+          <Footer />
+        </div>
+      </LanguageProvider>
     </>
   )
 }

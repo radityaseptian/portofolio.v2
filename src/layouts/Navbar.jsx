@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import Container from '../components/Container'
 import NavItem from '../components/NavItem'
 import MobileNavModal from '../components/MobileNavModal'
+import ToggleLanguage from '../components/ToggleLanguage'
+import useLanguage from '../context/LanguageContext'
 
 import {
   AiOutlineHome,
@@ -9,9 +11,9 @@ import {
   AiOutlineFundProjectionScreen,
 } from 'react-icons/ai'
 import { SiJavascript } from 'react-icons/si'
-import { BsFillSunFill, BsFillMoonStarsFill } from 'react-icons/bs'
-import { MdOutlineContacts } from 'react-icons/md'
 import { FaGraduationCap } from 'react-icons/fa'
+import { MdOutlineContacts } from 'react-icons/md'
+import { BsFillSunFill, BsFillMoonStarsFill } from 'react-icons/bs'
 import { FiGrid } from 'react-icons/fi'
 
 const navList = [
@@ -42,9 +44,10 @@ const navList = [
 ]
 
 export default function Navbar() {
+  const { language } = useLanguage()
   const [theme, setTheme] = useState(false)
   const [showModal, setShowModal] = useState(false)
-  const [target, setTarget] = useState('#beranda')
+  const [target, setTarget] = useState('#home')
 
   const html = document.documentElement
   const navbar = useRef(null)
@@ -79,13 +82,15 @@ export default function Navbar() {
           <Container>
             <div className='flex justify-between flex-row-reverse md:flex-row py-3 md:py-4 lg:py-5'>
               <ul className='hidden md:flex items-center gap-7 font-rubik font-semibold'>
-                {navList.map(({ name }) => {
-                  const hash = `#${name.toLowerCase()}`
+                {language?.header?.navbar.map(({ name }) => {
+                  const hash = `#${name}`
                   return (
                     <NavItem
                       onClick={() => setTarget(hash)}
                       className={
-                        target === hash ? 'text-black dark:text-white' : 'text-black/60 dark:text-white/60'
+                        target === hash
+                          ? 'text-black dark:text-white'
+                          : 'text-black/60 dark:text-white/60'
                       }
                       key={name}
                       name={name}
@@ -95,16 +100,19 @@ export default function Navbar() {
               </ul>
               <FiGrid
                 onClick={() => setShowModal(!showModal)}
-                className='md:hidden cursor-pointer bg-slate-100 border dark:border-zinc-600 dark:bg-zinc-950 w-8 h-8 box-content p-[.20rem] rounded'
+                className='md:hidden cursor-pointer bg-slate-100 border dark:border-zinc-600 dark:bg-[#141417] w-8 h-8 box-content p-[.20rem] rounded'
               />
               {showModal && <MobileNavModal item={navList} />}
-              <button onClick={() => setTheme(!theme)}>
-                {!theme ? (
-                  <BsFillSunFill className='w-6 h-6 p-2 box-content bg-slate-100 border rounded-md text-yellow-500' />
-                ) : (
-                  <BsFillMoonStarsFill className='w-6 h-6 p-2 box-content bg-zinc-950 rounded-md border border-zinc-600 text-stone-200' />
-                )}
-              </button>
+              <div className='flex items-center flex-row-reverse md:flex-row gap-2 md:gap-4'>
+                <ToggleLanguage />
+                <button onClick={() => setTheme(!theme)}>
+                  {!theme ? (
+                    <BsFillSunFill className='w-6 h-6 p-2 box-content bg-slate-100 border rounded-md text-yellow-500' />
+                  ) : (
+                    <BsFillMoonStarsFill className='w-6 h-6 p-2 box-content bg-[#141417] rounded-md border border-zinc-600 text-stone-200' />
+                  )}
+                </button>
+              </div>
             </div>
           </Container>
         </div>

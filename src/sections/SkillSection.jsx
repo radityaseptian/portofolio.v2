@@ -1,5 +1,7 @@
 import HeaderSection from '../components/HeaderSection'
+import Section from '../components/Section'
 import Skill from '../components/Skill'
+import useLanguage from '../context/LanguageContext'
 
 import html from '../../src/assets/skills/html.svg'
 import css from '../../src/assets/skills/css.svg'
@@ -17,8 +19,6 @@ import postman from '../../src/assets/skills/postman.png'
 import npm from '../../src/assets/skills/npm.svg'
 
 import { useState } from 'react'
-
-const tab = ['Bahasa', 'Kerangka/Pusataka', 'Database', 'Alat']
 
 const skill = [
   [
@@ -87,17 +87,21 @@ const skill = [
   ],
 ]
 
-const [language, framework, databases, tools] = skill
+const [languageList, framework, databases, tools] = skill
 
 export default function SkillSection() {
+  const { language } = useLanguage()
   const [count, setCount] = useState(1)
 
+  // ==== Language
+  const id = language?.header?.navbar[3]?.name
+  const title = language?.skills?.title
+  const description = language?.skills?.description
+  const tab = language?.skills?.tab
+
   return (
-    <section id='kemampuan' className='py-16'>
-      <HeaderSection
-        title='Kemampuan'
-        description='Semua kemampuan saya sejauh ini'
-      />{' '}
+    <Section id={id}>
+      <HeaderSection title={title} description={description} />
       <div className='overflow-hidden overflow-x-scroll'>
         <ul className='flex text-center w-[38rem] sm:w-auto'>
           {tab.map((item, i) => {
@@ -116,10 +120,10 @@ export default function SkillSection() {
           })}
         </ul>
       </div>
-      {count == 1 && <Skill list={language} />}
+      {count == 1 && <Skill list={languageList} />}
       {count == 2 && <Skill list={framework} />}
       {count == 3 && <Skill list={databases} />}
       {count == 4 && <Skill list={tools} />}
-    </section>
+    </Section>
   )
 }

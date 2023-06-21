@@ -1,5 +1,6 @@
 import Navbar from './Navbar'
 import Container from '../components/Container'
+import useLanguage from '../context/LanguageContext'
 
 import { TypeAnimation } from 'react-type-animation'
 
@@ -8,14 +9,19 @@ import { FaFileDownload } from 'react-icons/fa'
 import { ImBlog } from 'react-icons/im'
 
 export default function Header() {
+  const { language } = useLanguage()
+
+  // ==== Language
+  const id = language?.header?.navbar[0]?.name
+  const paragraf = language?.header?.headParagraf
+  const buttonDownload = language?.header?.buttonDownload
+  const buttonBlog = language?.header?.buttonBlog
+
   return (
-    <header
-      id='beranda'
-      className='min-h-screen flex items-center'
-    >
+    <header id={id} className='min-h-screen flex items-center'>
       <Navbar />
       <Container>
-        <div className='relative mb-14 mt-0 md:m-0'>
+        <div className='relative mb-14 mt-4 md:m-0'>
           <div className='absolute flex flex-col gap-4 md:gap-6 top-12 sm:top-16'>
             <a
               href='http://github.com/radityaseptian'
@@ -64,9 +70,7 @@ export default function Header() {
                   speed={200}
                   repeat={Infinity}
                 />
-                <p className='pb-2'>
-                  Halo semuanya 👋🏼, selamat datang di situs portofolio saya.
-                </p>
+                <p className='pb-2'>{paragraf}</p>
                 <div className='flex gap-2 flex-wrap py-2'>
                   <button>
                     <a
@@ -75,7 +79,7 @@ export default function Header() {
                       className='flex items-center gap-2 rounded-lg px-4 py-2 bg-slate-100 dark:bg-zinc-900 dark:border-zinc-700 border'
                     >
                       <FaFileDownload className='w-4 h-4' />
-                      <span className='font-poppins'>Unduh Resume</span>
+                      <span className='font-poppins'>{buttonDownload}</span>
                     </a>
                   </button>
                   <button>
@@ -87,7 +91,7 @@ export default function Header() {
                       className='flex items-center gap-2 rounded-lg px-4 py-2 bg-slate-100 dark:bg-zinc-900 dark:border-zinc-700 border'
                     >
                       <ImBlog className='w-4 h-4' />
-                      <span className='font-poppins'>Blog</span>
+                      <span className='font-poppins'>{buttonBlog}</span>
                       <FiArrowRight />
                     </a>
                   </button>

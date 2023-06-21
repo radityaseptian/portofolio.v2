@@ -1,11 +1,19 @@
+import useLanguage from '../context/LanguageContext'
 import HeaderSection from '../components/HeaderSection'
+import Section from '../components/Section'
 export default function AboutSection() {
+  const { language } = useLanguage()
+
+  // ==== Language
+  const id = language?.header?.navbar[1]?.name
+  const title = language?.about?.title
+  const description = language?.about?.description
+  const paraf1 = language?.about?.paragraf1
+  const paraf2 = language?.about?.paragraf2
+
   return (
-    <section id='tentang' className='py-16'>
-      <HeaderSection
-        title='Tentang'
-        description='Biarkan saya memperkenalkan diri'
-      />
+    <Section id={id}>
+      <HeaderSection title={title} description={description} />
       <div className='flex flex-col md:flex-row items-center gap-6 md:gap-10'>
         <img
           src='/profile.jpg'
@@ -13,18 +21,13 @@ export default function AboutSection() {
         />
         <div className='flex-1'>
           <p>
-            Halo, Nama saya Raditya M. Septian. Saya seorang Pengembang Situs
-            Website, saya tinggal di Bekasi, Indonesia. Saya lahir di Karawang
-            pada tanggal 24 September 2005 (17 tahun).
+            {paraf1}
             <br />
             <br />
-            Saya memiliki ketertarikan untuk belajar Fullstack Pengembang
-            Website, terutama yang berkaitan dengan Javascript. Saya cepat
-            belajar dan otodidak. Saya telah belajar banyak teknologi yang
-            berkaitan dengan Javascript dalam satu tahun terakhir dari internet.
+            {paraf2}
           </p>
         </div>
       </div>
-    </section>
+    </Section>
   )
 }
