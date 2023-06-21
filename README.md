@@ -44,7 +44,11 @@ tools needed before starting.
 
 ## Usage
 
-Change `/src/components`
+1. Run command `npm run dev`
+
+2. Open your browser and open `http://localhost:5173`
+
+3. Change `/src/components`
 
 ## Contributing
 

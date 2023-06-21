@@ -50,7 +50,9 @@ export default function ProjectSection() {
                         target='_blank'
                         className='flex items-center gap-1 bg-slate-100 hover:bg-slate-200 dark:bg-zinc-900 dark:hover:bg-zinc-950 p-2 rounded-md'
                       >
-                        <span>buka</span>
+                        <span>
+                          {language.country === 'en' ? 'open' : 'buka'}
+                        </span>
                         <BsArrowRight />
                       </a>
                     </div>
