@@ -16,33 +16,6 @@ import { MdOutlineContacts } from 'react-icons/md'
 import { BsFillSunFill, BsFillMoonStarsFill } from 'react-icons/bs'
 import { FiGrid } from 'react-icons/fi'
 
-const navList = [
-  {
-    name: 'Beranda',
-    icon: AiOutlineHome,
-  },
-  {
-    name: 'Tentang',
-    icon: AiOutlineUser,
-  },
-  {
-    name: 'Edukasi',
-    icon: FaGraduationCap,
-  },
-  {
-    name: 'Kemampuan',
-    icon: SiJavascript,
-  },
-  {
-    name: 'Karya',
-    icon: AiOutlineFundProjectionScreen,
-  },
-  {
-    name: 'Kontak',
-    icon: MdOutlineContacts,
-  },
-]
-
 export default function Navbar() {
   const { language } = useLanguage()
   const [theme, setTheme] = useState(false)
@@ -72,6 +45,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', scrollHandle)
   }, [])
 
+  const navbarList = language?.header?.navbar
+
   return (
     <>
       <nav>
@@ -82,7 +57,7 @@ export default function Navbar() {
           <Container>
             <div className='flex justify-between flex-row-reverse md:flex-row py-3 md:py-4 lg:py-5'>
               <ul className='hidden md:flex items-center gap-7 font-rubik font-semibold'>
-                {language?.header?.navbar.map(({ name }) => {
+                {navbarList.map(({ name }) => {
                   const hash = `#${name}`
                   return (
                     <NavItem
@@ -102,7 +77,7 @@ export default function Navbar() {
                 onClick={() => setShowModal(!showModal)}
                 className='md:hidden cursor-pointer bg-slate-100 border dark:border-zinc-600 dark:bg-[#141417] w-8 h-8 box-content p-[.20rem] rounded'
               />
-              {showModal && <MobileNavModal item={navList} />}
+              {showModal && <MobileNavModal item={navbarList} />}
               <div className='flex items-center flex-row-reverse md:flex-row gap-2 md:gap-4'>
                 <ToggleLanguage />
                 <button onClick={() => setTheme(!theme)}>
