@@ -25,6 +25,7 @@ This website using tech stack:
 
 tools needed before starting.
 
+- Git
 - Node js
 - Npm
 
@@ -46,9 +47,9 @@ tools needed before starting.
 
 1. Run command `npm run dev`
 
-2. Open your browser and open `http://localhost:5173`
+2. Open your browser and go to `http://localhost:5173`
 
-3. Change `/src/components`
+3. Change `/src/components` or `/src/sections/`
 
 ## Contributing
 
