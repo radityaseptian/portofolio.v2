@@ -50,21 +50,21 @@ export default function Footer() {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <FaGithub className='w-7 h-7 md:h-5 md:w-5 box-content p-2 rounded-md bg-black' />
+              <FaGithub className='w-6 h-6 md:h-5 md:w-5 box-content p-2 rounded-md bg-black' />
             </a>
             <a
               href='https://www.facebook.com/profile.php?id=100093066214468'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <FaFacebookF className='w-7 h-7 md:h-5 md:w-5 box-content p-2 rounded-md bg-[#3b5998]' />
+              <FaFacebookF className='w-6 h-6 md:h-5 md:w-5 box-content p-2 rounded-md bg-[#3b5998]' />
             </a>
             <a
               href='https://www.linkedin.com/in/raditya-septian-3a9768277/'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <FaLinkedinIn className='w-7 h-7 md:h-5 md:w-5 box-content p-2 rounded-md bg-[#0e76a8]' />
+              <FaLinkedinIn className='w-6 h-6 md:h-5 md:w-5 box-content p-2 rounded-md bg-[#0e76a8]' />
             </a>
           </div>
         </div>

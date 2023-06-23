@@ -195,7 +195,7 @@ const english = {
         title: 'HTML - CSS',
         date: '2022',
         description:
-          'How to make tag, Semantic element, Nested, Attribut, Link, HTML5, CSS dasar, Layouting, Flexbox, Grid, Transition',
+          'How to make tag, Semantic element, Nested, Attribut, Link, HTML5, CSS Basic, Layouting, Flexbox, Grid, Transition',
       },
     ],
   },

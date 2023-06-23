@@ -22,7 +22,7 @@ export default function Header() {
       <Navbar />
       <Container>
         <div className='relative mb-14 mt-4 md:m-0'>
-          <div className='absolute flex flex-col gap-4 md:gap-6 top-12 sm:top-16'>
+          <div className='absolute flex flex-col gap-4 md:gap-6 top-12 sm:top-16 lg:top-20'>
             <a
               href='http://github.com/radityaseptian'
               target='_blank'
@@ -49,7 +49,7 @@ export default function Header() {
           <div className='flex justify-between gap-6 items-center md:ml-20 lg:ml-36 flex-col md:flex-row-reverse'>
             <img
               src='/profile.jpg'
-              className='profile-animation w-52 bg-black/5 p-1 sm:w-64 ml-12 md:ml-0'
+              className='profile-animation w-52 bg-black/5 p-1 sm:w-64 lg:w-72 ml-12 md:ml-0'
             />
             <div className='self-stretch md:self-center flex justify-center'>
               <div>
