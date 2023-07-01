@@ -8,7 +8,7 @@ import css from '../../src/assets/skills/css.svg'
 import js from '../../src/assets/skills/js.svg'
 import react from '../../src/assets/skills/react.svg'
 import tailwind from '../../src/assets/skills/tailwind.svg'
-import next from '../../src/assets/skills/next.svg'
+import vite from '../../src/assets/skills/vite.svg'
 import node from '../../src/assets/skills/nodejs.png'
 import express from '../../src/assets/skills/express.svg'
 import mongo from '../../src/assets/skills/mongo.svg'
@@ -45,10 +45,6 @@ const skill = [
       img: tailwind,
     },
     {
-      name: 'Next.JS',
-      img: next,
-    },
-    {
       name: 'Node.JS',
       img: node,
     },
@@ -71,6 +67,10 @@ const skill = [
     {
       name: 'GIT',
       img: git,
+    },
+    {
+      name: 'Vite',
+      img: vite,
     },
     {
       name: 'VS Code',

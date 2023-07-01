@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://www.radityaseptian.my.id/">
-    <img src="./src/assets/demo/portofolio.v2.png" alt="Logo">
+    <img src="./src/assets/demo/portofolio.v2.webp" alt="Logo">
   </a>
 
   <p align="center">
