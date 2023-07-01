@@ -183,7 +183,7 @@ const english = {
         title: 'Frontend Framework / Library',
         date: '2022 - Now',
         description:
-          'Tailwind.CSS, React.JS, React.JS Hooks, React.JS Routing, Next.JS',
+          'Tailwind.CSS, React.JS, Conditional Rendering, React.JS Hooks, React.JS Routing',
       },
       {
         title: 'Javascript',
@@ -351,7 +351,7 @@ const indonesia = {
         title: 'Frontend Framework / Library',
         date: '2022 - Sekarang',
         description:
-          'Tailwind.CSS, React.JS, React.JS Hooks, React.JS Routing,  Next.JS',
+          'Tailwind.CSS, React.JS, Kondisi rendering, React.JS Hooks, React.JS Routing',
       },
       {
         title: 'Javascript',
