@@ -1,12 +1,23 @@
 import Container from '../components/Container'
-import useLanguage from '../context/LanguageContext'
 
 import { FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa'
 
 export default function Footer() {
-  const { language } = useLanguage()
-
-  const footer = language?.footer
+  const footer = [
+    'beranda',
+    '/',
+    'tentang',
+    '/',
+    'kemampuan',
+    '/',
+    'edukasi',
+    '/',
+    'karya',
+    '/',
+    'kontak',
+    '/',
+    'blog',
+  ]
 
   return (
     <footer className='rounded-t-xl md:rounded-t-3xl bg-white dark:bg-[#1d1d1d] pb-24 md:pb-12 pt-10'>
@@ -22,7 +33,6 @@ export default function Footer() {
                       {item}
                     </li>
                   )
-                case 'blogs':
                 case 'blog':
                   return (
                     <li key={i}>
@@ -45,15 +55,11 @@ export default function Footer() {
             })}
           </ul>
           <div className='flex gap-4 md:gap-6 pt-3 text-white'>
-            <a
-              href='http://github.com/radityaseptian'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
+            <a href='http://github.com/radityaseptian' target='_blank' rel='noopener noreferrer'>
               <FaGithub className='w-6 h-6 md:h-5 md:w-5 box-content p-2 rounded-md bg-black' />
             </a>
             <a
-              href='https://www.facebook.com/profile.php?id=100093066214468'
+              href='https://www.facebook.com/raditya.adhit.3'
               target='_blank'
               rel='noopener noreferrer'
             >

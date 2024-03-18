@@ -1,30 +1,24 @@
-import { LanguageProvider } from './context/LanguageContext'
 import Header from './layouts/Header'
 import Container from './components/Container'
-import AboutSection from './sections/AboutSection'
-import EducationSection from './sections/EducationSection'
-import SkillSection from './sections/SkillSection'
-import ProjectSection from './sections/ProjectSection'
-import ContactSection from './sections/ContactSection'
-
+import About from './sections/About'
+import Education from './sections/Education'
+import Skill from './sections/Skill'
+import Project from './sections/Project'
+import Contact from './sections/Contact'
 import Footer from './layouts/Footer'
 
 export default function App() {
   return (
-    <>
-      <LanguageProvider>
-        <div className='antialiased bg-slate-50 dark:bg-zinc-800 dark:text-white'>
-          <Header />
-          <Container>
-            <AboutSection />
-            <EducationSection />
-            <SkillSection />
-            <ProjectSection />
-            <ContactSection />
-          </Container>
-          <Footer />
-        </div>
-      </LanguageProvider>
-    </>
+      <div className='antialiased bg-slate-50 dark:bg-zinc-800 dark:text-white'>
+        <Header />
+        <Container>
+          <About />
+          <Education />
+          <Skill />
+          <Project />
+          <Contact />
+        </Container>
+        <Footer />
+      </div>
   )
 }
