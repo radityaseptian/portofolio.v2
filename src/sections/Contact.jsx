@@ -3,8 +3,8 @@ import Section from '../components/Section'
 import ContactSosmed from '../components/ContactSosmed'
 import Input from '../components/Input'
 
-import { AiOutlineMail, AiOutlineLinkedin } from 'react-icons/ai'
-import { RiSendPlane2Line } from 'react-icons/ri'
+import { AiOutlineMail } from 'react-icons/ai'
+import { FaLinkedinIn } from 'react-icons/fa'
 
 import { useState } from 'react'
 
@@ -56,7 +56,7 @@ export default function ContactSection() {
             href='mailto:radityaseptian1551@gmail.com'
           />
           <ContactSosmed
-            icon={AiOutlineLinkedin}
+            icon={FaLinkedinIn}
             name='Linkedin'
             username='@raditya-septian-3a9768277'
             href='https://www.linkedin.com/in/raditya-septian-3a9768277/'
@@ -85,7 +85,7 @@ export default function ContactSection() {
               className='flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md'
             >
               <span className='font-bold'>{!wait ? 'Kirim' : 'Tunggu'}</span>
-              <RiSendPlane2Line />
+              <span>&#11162;</span>
             </button>
             <span>{info}</span>
           </div>

@@ -1,5 +1,3 @@
-import { FiArrowRight } from 'react-icons/fi'
-
 export default function ContactSosmed({ name, username, icon: Icon, href }) {
   return (
     <div className='border flex flex-col items-center p-4 rounded-lg bg-white dark:bg-[#242424] dark:border-zinc-600'>
@@ -10,7 +8,7 @@ export default function ContactSosmed({ name, username, icon: Icon, href }) {
       <div>{username}</div>
       <a href={href} target='_blank' className='flex items-center gap-1 hover:gap-2 pt-4'>
         <span>Hubungi</span>
-        <FiArrowRight />
+        <span>&#11162;</span>
       </a>
     </div>
   )

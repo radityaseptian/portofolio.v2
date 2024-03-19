@@ -1,7 +1,7 @@
 import HeaderSection from '../components/HeaderSection'
 import Section from '../components/Section'
 
-import { BsArrowRight, BsCodeSlash } from 'react-icons/bs'
+import { BsCodeSlash } from 'react-icons/bs'
 
 import blogImg from '../assets/demo/blog.webp'
 import shiganimeImg from '../assets/demo/shiganime.webp'
@@ -141,8 +141,8 @@ export default function ProjectSection() {
                       target='_blank'
                       className='flex items-center gap-1 bg-slate-100 hover:bg-slate-200 dark:bg-zinc-900 dark:hover:bg-zinc-950 p-2 rounded-md'
                     >
-                      <span>'buka'</span>
-                      <BsArrowRight />
+                      <span>buka</span>
+                      <span>&#11162;</span>
                     </a>
                   </div>
                 </div>

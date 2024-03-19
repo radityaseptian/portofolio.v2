@@ -3,7 +3,7 @@ import Container from '../components/Container'
 
 import { TypeAnimation } from 'react-type-animation'
 
-import { FiGithub, FiFacebook, FiLinkedin, FiArrowRight } from 'react-icons/fi'
+import { FiGithub, FiFacebook, FiLinkedin } from 'react-icons/fi'
 import { FaFileDownload } from 'react-icons/fa'
 import { ImBlog } from 'react-icons/im'
 
@@ -83,7 +83,6 @@ export default function Header() {
                     >
                       <ImBlog className='w-4 h-4' />
                       <span className='font-poppins'>Blog</span>
-                      <FiArrowRight />
                     </a>
                   </button>
                 </div>
