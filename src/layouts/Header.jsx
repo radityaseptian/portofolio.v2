@@ -4,8 +4,6 @@ import Container from '../components/Container'
 import { TypeAnimation } from 'react-type-animation'
 
 import { FiGithub, FiFacebook, FiLinkedin } from 'react-icons/fi'
-import { FaFileDownload } from 'react-icons/fa'
-import { ImBlog } from 'react-icons/im'
 
 export default function Header() {
   return (
@@ -66,23 +64,10 @@ export default function Header() {
                   <button>
                     <a
                       href='/resume.pdf'
-                      download
-                      className='flex items-center gap-2 rounded-lg px-4 py-2 bg-slate-100 hover:bg-slate-200 dark:hover:bg-zinc-950 dark:bg-zinc-900 dark:border-zinc-700 border'
+                      download={true}
+                      className='font-poppins flex items-center gap-2 rounded-lg px-4 py-2 bg-slate-100 hover:bg-slate-200 dark:hover:bg-zinc-950 dark:bg-zinc-900 dark:border-zinc-700 border'
                     >
-                      <FaFileDownload className='w-4 h-4' />
-                      <span className='font-poppins'>Unduh Resume</span>
-                    </a>
-                  </button>
-                  <button>
-                    <a
-                      href='https://radwritter.vercel.app'
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      download
-                      className='flex items-center gap-2 rounded-lg px-4 py-2 bg-slate-100 hover:bg-slate-200 dark:hover:bg-zinc-950 dark:bg-zinc-900 dark:border-zinc-700 border'
-                    >
-                      <ImBlog className='w-4 h-4' />
-                      <span className='font-poppins'>Blog</span>
+                      Lihat Resume
                     </a>
                   </button>
                 </div>

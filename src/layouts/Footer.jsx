@@ -1,6 +1,7 @@
 import Container from '../components/Container'
 
-import { FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa'
+// import { FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa'
+import { FiGithub, FiFacebook, FiLinkedin } from 'react-icons/fi'
 
 export default function Footer() {
   const footer = [
@@ -56,21 +57,21 @@ export default function Footer() {
           </ul>
           <div className='flex gap-4 md:gap-6 pt-3 text-white'>
             <a href='http://github.com/radityaseptian' target='_blank' rel='noopener noreferrer'>
-              <FaGithub className='w-6 h-6 md:h-5 md:w-5 box-content p-2 rounded-md bg-black' />
+              <FiGithub className='w-6 h-6 md:h-5 md:w-5 box-content p-2 rounded-md bg-black' />
             </a>
             <a
               href='https://www.facebook.com/raditya.adhit.3'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <FaFacebookF className='w-6 h-6 md:h-5 md:w-5 box-content p-2 rounded-md bg-[#3b5998]' />
+              <FiFacebook className='w-6 h-6 md:h-5 md:w-5 box-content p-2 rounded-md bg-[#3b5998]' />
             </a>
             <a
               href='https://www.linkedin.com/in/raditya-septian-3a9768277/'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <FaLinkedinIn className='w-6 h-6 md:h-5 md:w-5 box-content p-2 rounded-md bg-[#0e76a8]' />
+              <FiLinkedin className='w-6 h-6 md:h-5 md:w-5 box-content p-2 rounded-md bg-[#0e76a8]' />
             </a>
           </div>
         </div>

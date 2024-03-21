@@ -4,7 +4,7 @@ import ContactSosmed from '../components/ContactSosmed'
 import Input from '../components/Input'
 
 import { AiOutlineMail } from 'react-icons/ai'
-import { FaLinkedinIn } from 'react-icons/fa'
+import { FiLinkedin } from 'react-icons/fi'
 
 import { useState } from 'react'
 
@@ -13,7 +13,7 @@ export default function ContactSection() {
   const [info, setInfo] = useState('')
 
   // endpoint getform.io, replace to your endpoint
-  const url = 'https://getform.io/f/e8958e2d-450d-4dd5-8d4d-e67dbdd18110'
+  const url = 'https://getform.io/f/paygpdqa'
   const sendMessage = (e) => {
     e.preventDefault()
     setWait(true)
@@ -56,7 +56,7 @@ export default function ContactSection() {
             href='mailto:radityaseptian1551@gmail.com'
           />
           <ContactSosmed
-            icon={FaLinkedinIn}
+            icon={FiLinkedin}
             name='Linkedin'
             username='@raditya-septian-3a9768277'
             href='https://www.linkedin.com/in/raditya-septian-3a9768277/'

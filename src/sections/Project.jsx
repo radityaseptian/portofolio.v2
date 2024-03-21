@@ -1,22 +1,61 @@
 import HeaderSection from '../components/HeaderSection'
 import Section from '../components/Section'
 
-import { BsCodeSlash } from 'react-icons/bs'
-
 import blogImg from '../assets/demo/blog.webp'
 import shiganimeImg from '../assets/demo/shiganime.webp'
 import zeitplanImg from '../assets/demo/zeitplan.webp'
 import portofolio1Img from '../assets/demo/portofolio.webp'
 import portofolio2Img from '../assets/demo/portofolio.v2.webp'
+import walagraf from '../assets/demo/walagraf.webp'
 
 import tailwind from '../assets/skills/tailwind.svg'
 import react from '../assets/skills/react.svg'
 import node from '../assets/skills/nodejs.png'
 import express from '../assets/skills/express.svg'
 import mongo from '../assets/skills/mongo.svg'
+import socket from '../assets/skills/socket.svg'
+import typescript from '../assets/skills/typescript.svg'
 
 export default function ProjectSection() {
   const projects = [
+    {
+      name: 'Walagraf',
+      description:
+        '[DALAM PENGEMBANGAN] Whatsapp + Telegram clone multi akun sinkron dengan official akun',
+      img: walagraf,
+      linkDemo: 'https://github.com/radityaseptian/walagraf',
+      linkRepo: 'https://github.com/radityaseptian/walagraf',
+      stack: [
+        {
+          name: 'React.JS',
+          icon: react,
+        },
+        {
+          name: 'Typescript',
+          icon: typescript,
+        },
+        {
+          name: 'Tailwind.CSS',
+          icon: tailwind,
+        },
+        {
+          name: 'Node.JS',
+          icon: node,
+        },
+        {
+          name: 'Express.JS',
+          icon: express,
+        },
+        {
+          name: 'Socket.IO',
+          icon: socket,
+        },
+        {
+          name: 'MongoDB',
+          icon: mongo,
+        },
+      ],
+    },
     {
       name: 'Blog Pribadi',
       description: 'Website blog pribadi untuk menulis dan membagikan topik seputar teknologi',
@@ -133,8 +172,13 @@ export default function ProjectSection() {
                 <div className='flex gap-1 justify-between items-center'>
                   <h3 className='text-xl font-poppins font-semibold'>{name}</h3>
                   <div className='self-start flex items-center gap-1'>
-                    <a href={linkRepo} target='_blank' rel='noopener noreferrer'>
-                      <BsCodeSlash className='w-6 h-6 box-content p-2 rounded-md bg-slate-100 hover:bg-slate-200 dark:bg-zinc-900 dark:hover:bg-zinc-950' />
+                    <a
+                      href={linkRepo}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='whitespace-nowrap text-lg py-1.5 px-2 rounded-md bg-slate-100 hover:bg-slate-200 dark:bg-zinc-900 dark:hover:bg-zinc-950'
+                    >
+                      {'</>'}
                     </a>
                     <a
                       href={linkDemo}

@@ -3,9 +3,6 @@ import Container from '../components/Container'
 import NavItem from '../components/NavItem'
 import MobileNavModal from '../components/MobileNavModal'
 
-import { BsFillSunFill, BsFillMoonStarsFill } from 'react-icons/bs'
-import { FiGrid } from 'react-icons/fi'
-
 export default function Navbar() {
   const [theme, setTheme] = useState(false)
   const [showModal, setShowModal] = useState(false)
@@ -61,18 +58,24 @@ export default function Navbar() {
                 )
               })}
             </ul>
-            <FiGrid
+            <button
               onClick={() => setShowModal(!showModal)}
-              className='md:hidden cursor-pointer bg-slate-100 border hover:bg-slate-200 dark:hover:bg-zinc-950 dark:border-zinc-600 dark:bg-[#141417] w-8 h-8 box-content p-[.20rem] rounded'
-            />
+              className='md:hidden text-3xl font-semibold cursor-pointer bg-slate-100 border hover:bg-slate-200 dark:hover:bg-zinc-950 dark:border-zinc-600 dark:bg-[#141417] box-content py-[.1rem] px-[.4rem] rounded'
+            >
+              <span>☰</span>
+            </button>
             {showModal && <MobileNavModal names={navbarList} />}
             <div className='flex items-center flex-row-reverse md:flex-row gap-2 md:gap-4'>
               <button onClick={() => setTheme(!theme)}>
-                {!theme ? (
-                  <BsFillSunFill className='w-6 h-6 p-2 box-content bg-slate-100 hover:bg-slate-200 border rounded-md text-yellow-500' />
-                ) : (
-                  <BsFillMoonStarsFill className='w-6 h-6 p-2 box-content bg-[#141417] hover:bg-zinc-950 rounded-md border border-zinc-600 text-stone-200' />
-                )}
+                <span
+                  className={`p-2.5 lg:p-2 border rounded-md ${
+                    theme
+                      ? 'bg-[#141417] hover:bg-zinc-950 border-zinc-600'
+                      : 'bg-slate-100 hover:bg-slate-200'
+                  }`}
+                >
+                  {!theme ? '🌞' : '🌚'}
+                </span>
               </button>
             </div>
           </div>

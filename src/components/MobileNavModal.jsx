@@ -4,7 +4,7 @@ export default function MobileNavModal({ names = [] }) {
       <ul className='grid grid-cols-3 gap-8 px-5'>
         {names.map((name) => {
           return (
-            <a href={`#${name}`}>
+            <a href={`#${name}`} className='font-semibold'>
               <li key={name}>{name}</li>
             </a>
           )
