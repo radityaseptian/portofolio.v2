@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 * {
-  transition-duration: 0.3s;
   font-family: 'rubik';
   scroll-behavior: smooth;
   scrollbar-width: thin;
