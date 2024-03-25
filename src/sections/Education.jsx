@@ -35,7 +35,8 @@ export default function EducationSection() {
     {
       title: 'Frontend Framework / Library',
       date: '2022 - Sekarang',
-      description: 'Tailwind.CSS, React.JS, Kondisi rendering, React.JS Hooks, React.JS Routing',
+      description:
+        'Tailwind.CSS, React.JS, Kondisi rendering, React.JS Hooks, React.JS Routing, State Management Zustand',
     },
     {
       title: 'Javascript',
