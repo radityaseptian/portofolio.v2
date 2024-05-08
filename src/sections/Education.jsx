@@ -29,8 +29,7 @@ export default function EducationSection() {
     {
       title: 'Database',
       date: '2023 - Sekarang',
-      description:
-        'MongoDB, Mencari data, membuat data, mengedit data, menghapus data, mencari data berdasarkan regex',
+      description: 'MongoDB, Mencari data, membuat data, mengedit data, menghapus data, mencari data berdasarkan regex',
     },
     {
       title: 'Frontend Framework / Library',
@@ -41,8 +40,7 @@ export default function EducationSection() {
     {
       title: 'Javascript',
       date: '2022',
-      description:
-        'Dasar, Tipe data, Perulangan, Perkondisian, Function, DOM, ES6, Promise, Async/Await',
+      description: 'Dasar, Tipe data, Perulangan, Perkondisian, Function, DOM, ES6, Promise, Async/Await',
     },
     {
       title: 'HTML - CSS',

@@ -58,8 +58,8 @@ export default function ContactSection() {
           <ContactSosmed
             icon={FiLinkedin}
             name='Linkedin'
-            username='@raditya-septian-3a9768277'
-            href='https://www.linkedin.com/in/raditya-septian-3a9768277/'
+            username='linkedin.com/in/radityaseptian'
+            href='https://www.linkedin.com/in/radityaseptian/'
           />
         </div>
         <form onSubmit={sendMessage} className='flex-1 space-y-8'>

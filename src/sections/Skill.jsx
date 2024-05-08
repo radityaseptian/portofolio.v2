@@ -19,6 +19,7 @@ import npm from '../../src/assets/skills/npm.svg'
 import ts from '../../src/assets/skills/typescript.svg'
 import electron from '../../src/assets/skills/electron.svg'
 import socket from '../../src/assets/skills/socket.svg'
+import mysql from '../../src/assets/skills/mysql.png'
 
 import { useState } from 'react'
 
@@ -62,6 +63,10 @@ export default function SkillSection() {
         img: socket,
       },
       {
+        name: 'React Native',
+        img: react,
+      },
+      {
         name: 'Electron.JS',
         img: electron,
       },
@@ -74,6 +79,10 @@ export default function SkillSection() {
       {
         name: 'MongoDB',
         img: mongo,
+      },
+      {
+        name: 'MySQL (ORM)',
+        img: mysql,
       },
     ],
     [

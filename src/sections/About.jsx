@@ -9,13 +9,13 @@ export default function AboutSection() {
         <img src='/profile.jpg' className='rounded-3xl w-60 md:w-auto md:max-w-sm' />
         <div className='flex-1'>
           <p>
-            Halo, Nama saya Raditya M. Septian. Saya seorang Pengembang Situs Website, saya tinggal
-            di Bekasi, Indonesia. Saya lahir di Karawang pada tanggal 24 September 2005 (18 tahun).
+            Halo, Nama saya Raditya M. Septian saya lahir pada tanggal 24 September 2005 (18 tahun). Saya seorang
+            Pengembang Situs Website, saya tinggal di Bekasi, Indonesia.
             <br />
             <br />
-            Saya memiliki ketertarikan untuk belajar Fullstack Pengembang Website, terutama yang
-            berkaitan dengan Javascript. Saya cepat belajar dan otodidak. Saya telah belajar banyak
-            teknologi yang berkaitan dengan Javascript dalam dua tahun terakhir dari internet.
+            Saya memiliki ketertarikan untuk belajar Fullstack Pengembang Website, terutama yang berkaitan dengan
+            Javascript. Saya cepat belajar dan otodidak. Saya telah belajar banyak teknologi yang berkaitan dengan
+            Javascript dalam dua tahun terakhir dari internet.
           </p>
         </div>
       </div>
